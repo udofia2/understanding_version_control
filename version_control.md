@@ -1,0 +1,1 @@
+Discussing version controll with Thankgod and Ezo
