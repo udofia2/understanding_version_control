@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email Confirmation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Transparent overlay -->
+  <div class="modal-overlay">
+    <div class="modal-wrapper">
+      <h1 class="confirm-header">CONFIRM YOUR EMAIL</h1>
+
+      <div class="modal">
+        <img src="securityicon.jpg" alt="Security Icon" class="security-image"/>
+
+        <p class="email-info">
+          We’ve sent a code to <span id="user-email">Johndoe@gmail.com</span>
+        </p>
+
+        <p class="enter-code"><strong>Enter the verification code here</strong></p>
+
+        <p class="expire-msg">
+          This code will expire in <span id="countdown">02:00s</span>
+        </p>
+
+        <div class="otp-inputs">
+          <input type="text" maxlength="1" />
+          <input type="text" maxlength="1" />
+          <input type="text" maxlength="1" />
+          <input type="text" maxlength="1" />
+          <input type="text" maxlength="1" />
+          <input type="text" maxlength="1" />
+        </div>
+
+        <p class="change-email">Not my Email Address? <a href="#">Change</a></p>
+
+        <p class="resend">Didn’t receive the email ? <a href="#">Resend</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
