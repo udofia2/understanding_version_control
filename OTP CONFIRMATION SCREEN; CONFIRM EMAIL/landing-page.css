@@ -1,0 +1,26 @@
+body {
+	margin: 0;
+	padding: 0;
+    background-color: #174EA6D9;
+    font-family: 'Poppins', sans-serif,'Times New Roman', Times, serif;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #174EA6D9;
+    color: white;
+}
+.narbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.narbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
