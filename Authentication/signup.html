@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="../Assets/Styles/signup.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+</head>
+<body>
+  <header>
+        <div class="logo">PropMate</div>
+        <a href="#" class="back-link">Back to home</a>
+  </header>
+   
+  <main>
+    <div class="card">
+      <h2>Let's get you onboard. It's easy</h2>
+
+      <form class="signup-form">
+
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <div class="placeholder-icon">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="name" placeholder="Enter your Name" required />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <div class="placeholder-icon">
+          <i class="fa-regular fa-envelope"></i>
+          <input type="email" id="email" placeholder="Enter your Email" required />
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <div class="placeholder-icon password-wrapper">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" placeholder="Enter your Password" minlength="8" maxlength="8" required />
+            <span class="toggle" onclick="toggleVisibility('password')"><i class="fa-regular fa-eye"></i></span>
+          </div>
+          <small class="error-message"></small>
+        </div>
+        
+        <div class="input-group">
+          <label for="confirm-password">Confirm Password</label>
+          <div class="placeholder-icon password-wrapper">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" minlength="8" maxlength="8" required /> 
+            <span class="toggle" onclick="toggleVisibility('confirm-password')"><i class="fa-regular fa-eye"></i></span>
+            
+          </div>
+          <small class="error-message"></small>
+        </div>        
+        <div class="checkbox-group">
+          <input type="checkbox" id="terms" required />
+          <label for="terms">By signing up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a></label>
+        </div>
+
+        <button type="submit" class="signup-btn">Sign up</button>
+
+        <div class="divider"><span>or</span></div>
+
+        <button type="button" class="google-btn">Sign Up with Google</button>
+
+        <p> <a href="#" class="signin-link">Have an account? <span>Sign in</span></a> </p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <a href="#">Terms of use</a> |
+    <a href="#">Privacy</a>
+  </footer>
+  <script>
+    // Toggle visibility
+    function toggleVisibility(id) {
+      const input = document.getElementById(id);
+      const icon = input.parentElement.querySelector(".toggle i");
+  
+      if (input.type === "password") {
+        input.type = "text";
+        icon.classList.replace("fa-eye", "fa-eye-slash");
+      } else {
+        input.type = "password";
+        icon.classList.replace("fa-eye-slash", "fa-eye");
+      }
+    }
+  
+    // Form validation
+    document.querySelector(".signup-form").addEventListener("submit", function (e) {
+      const name = document.getElementById("name");
+      const email = document.getElementById("email");
+      const password = document.getElementById("password");
+      const confirmPassword = document.getElementById("confirm-password");
+      let valid = true;
+  
+      // Clear previous error states
+      document.querySelectorAll(".error-message").forEach(el => el.textContent = '');
+      document.querySelectorAll(".input-group input").forEach(el => el.classList.remove("input-error"));
+  
+      // Name validation
+      if (name.value.trim() === "") {
+        showError(name, "Name is required");
+        valid = false;
+      }
+  
+      // Email validation
+      if (!email.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
+        showError(email, "Enter a valid email");
+        valid = false;
+      }
+  
+      // Password length
+      if (password.value.length !== 8) {
+        showError(password, "Password must be exactly 8 characters");
+        valid = false;
+      }
+  
+      // Password match
+      if (password.value !== confirmPassword.value) {
+        showError(confirmPassword, "Passwords do not match");
+        valid = false;
+      }
+  
+      if (!valid) e.preventDefault();
+    });
+  
+    function showError(input, message) {
+      const group = input.closest(".input-group");
+      const error = group.querySelector(".error-message");
+      error.textContent = message;
+      input.classList.add("input-error");
+    }
+  </script>
+  
+  <!-- <script src="script.js"></script> -->
+</body>
+</html>
