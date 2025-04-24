@@ -1,5 +1,5 @@
-// Countdown logic
-let seconds = 116;
+// Countdown logic — now 5 minutes
+let seconds = 300;
 const countdownEl = document.getElementById("countdown");
 
 const timer = setInterval(() => {
@@ -28,7 +28,7 @@ inputs.forEach((input, index) => {
     if (e.key === 'Backspace') {
       if (input.value === '' && index > 0) {
         inputs[index - 1].focus();
-        inputs[index - 1].value = ''; // optional: clear the previous field
+        inputs[index - 1].value = '';
         e.preventDefault();
       }
     }

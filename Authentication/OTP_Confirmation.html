@@ -3,44 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Email Confirmation</title>
-  <link rel="stylesheet" href="../Assets/Styles/OTP_CONFIRMATION.css" />
+  <title>Confirm Your Email</title>
+  <link rel="stylesheet" href="../Assets/Styles/otp_confirmation.css"/>
 </head>
 <body>
-  <!-- Transparent overlay -->
-  <div class="modal-overlay">
-    <div class="modal-wrapper">
-      <h1 class="confirm-header">CONFIRM YOUR EMAIL</h1>
+  <header class="header">
+    <div class="logo">Prop<span>Mate</span></div>
+    <a href="#" class="back-home">Back to home</a>
+  </header>
 
-      <div class="modal">
-        <img src="../Assets/Images/securityicon.jpg" alt="Security Icon" class="security-image"/>
+  <main class="main-container">
+    <h2 class="confirm-title">CONFIRM YOUR EMAIL</h2>
+    
+    <div class="modal-box">
+      <img src="../Assets/Images/securityicon.jpg" alt="Security" class="security-img" />
+      
+      <p class="email-info">
+        We’ve sent a code to <span class="user-email">Johndoe@gmail.com</span>
+      </p>
+      
+      <p class="enter-label"><strong>Enter the verification code here</strong></p>
 
-        <p class="email-info">
-          We’ve sent a code to <span id="user-email">Johndoe@gmail.com</span>
-        </p>
+      <p class="countdown">This code will expire in <span id="timer">02:00</span></p>
 
-        <p class="enter-code"><strong>Enter the verification code here</strong></p>
-
-        <p class="expire-msg">
-          This code will expire in <span id="countdown">02:00s</span>
-        </p>
-
-        <div class="otp-inputs">
-          <input type="text" maxlength="1" />
-          <input type="text" maxlength="1" />
-          <input type="text" maxlength="1" />
-          <input type="text" maxlength="1" />
-          <input type="text" maxlength="1" />
-          <input type="text" maxlength="1" />
-        </div>
-
-        <p class="change-email">Not my Email Address? <a href="#">Change</a></p>
-
-        <p class="resend">Didn’t receive the email ? <a href="#">Resend</a></p>
+      <div class="otp-inputs">
+        <input type="text" maxlength="1" />
+        <input type="text" maxlength="1" />
+        <input type="text" maxlength="1" />
+        <input type="text" maxlength="1" />
+        <input type="text" maxlength="1" />
+        <input type="text" maxlength="1" />
       </div>
-    </div>
-  </div>
 
-  <script src="../Assets/Scripts/OTP_CONFIRMATION.js"></script>
+      <p class="change-email">Not my Email Address? <a href="#">Change</a></p>
+
+      <p class="resend-text">Didn’t receive the email ? <a href="#">Resend</a></p>
+    </div>
+
+    <!-- Terms section moved below modal -->
+    <div class="terms-links">
+      <a href="#">Terms of use</a>
+      <span>|</span>
+      <a href="#">Privacy</a>
+    </div>
+  </main>
+
+  <script src="../Assets/Scripts/otp_confirmation.js"></script>
 </body>
 </html>
