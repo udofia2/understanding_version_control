@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f8f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 1rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.125rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1a50a7;
+  }
+
+  .back-link {
+    color: #f3b52b;
+    text-decoration: none;
+    font-size: 0.875rem;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1rem;
+  }
+  .card {
+    background: linear-gradient(to bottom, #f0f0f0, #d6d6d6);
+    border-radius: 1.25rem;
+    padding: 3.75rem;
+    width: 95%;
+    max-width: 600px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .card h2 {
+    /*margin-bottom: 1.875rem;*/
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+  }
+  .signin-link {
+    color: #1a50a7;
+    font-size: 0.875rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.25rem;
+  }
+
+  .signin-link span:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.25rem 0.625rem;
+    font-size: 0.8125rem;
+    color: #777;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: #f3b52b;
+    margin: 0 0.3125rem;
+  }
+
+  .signup-form {
+    /*display: flex;*/
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    padding: 0.125rem 0.245rem;
+  }
+  
+  .input-group label {
+    margin-bottom: 6px;
+    text-align: justify;
+    font-size: 1.125rem; 
+
+  }
+  
+  .input-group input {
+    padding: 0.8rem 1.8rem;
+    border-radius: 0px 20px 0px 20px;
+    border: none;
+    /*border: 1px solid #ccc;*/
+    font-size: 14px;
+    width: 100%;
+    /*background: #f9f9f9;*/
+    outline: none;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .checkbox-group a {
+    color: #1a50a7;
+    text-decoration: none;
+  }
+  .checkbox-group a:hover {
+    text-decoration: underline;
+  }
+  
+  .signup-btn {
+    font-size: 1rem;
+    /*padding: 0.625rem 1rem;*/
+    padding: 0.75rem 3rem;
+    background-color: #1a50a7;
+    color: #f3b52b;
+    border: none;
+    border-radius: 1.25rem;
+    /*font-size: 16px;*/
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .signup-btn:hover {
+    background-color: blue;
+  }
+  
+  .divider {
+    text-align: center;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+    position: relative;
+  }
+  .divider span {
+    background: #d6d6d6;
+    padding: 0 10px;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    color: #555;
+  }
+  
+  .google-btn {
+    background: #dfdfdf;
+   border: none;
+    border-radius: 1.25rem;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .google-btn:hover {
+    background-color: #eee;
+  }
+  
+  .placeholder-icon {
+    position: relative;
+  }
+  .input-group i {
+    position: absolute;
+    margin: 0.8rem 0.5rem;
+    color: #888;
+  }
+
+ .input-group .fa-eye {
+    /*right: 5px;*/
+    cursor: pointer;
+  }
+  .input-error {
+    border: 1px solid red;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 4px;
+  }
