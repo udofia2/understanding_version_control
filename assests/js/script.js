@@ -1,3 +1,4 @@
+console.log("Script loaded");
 // OTP Auto-Focus
 const inputs = document.querySelectorAll(".otp-inputs input");
 inputs.forEach((input, index) => {
