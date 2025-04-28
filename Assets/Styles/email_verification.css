@@ -1,0 +1,135 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body settings */
+body {
+    background-color: #174EA6;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px; /* Reduced top padding */
+    gap: 20px;
+}
+
+/* Header section (PropMate and Back to Home) */
+.header {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #D4AF37;
+    margin-bottom: 10px; /* Tighter below header */
+}
+
+/* Logo styles */
+.logo {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+/* Back to home link styles */
+.back-home {
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    color: #D4AF37;
+}
+
+/* Verification title */
+.verification-title {
+    font-weight: 600;
+    font-size: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 10px; /* Reduced space below header */
+    margin-bottom: 20px;
+}
+
+/* Modal container */
+.modal {
+    background-color: #FFFFFF;
+    width: 700px; /* Slightly reduced width */
+    padding: 25px 40px; /* Reduced padding inside */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Tighter inside modal */
+    margin-top: 10px; /* Reduced distance from title */
+}
+
+/* Modal image */
+.modal-image {
+    width: 220px; /* Smaller image */
+    height: auto;
+}
+
+/* Modal description text */
+.modal-description {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    line-height: 1.5;
+    width: 350px; /* Reduced a bit */
+}
+
+/* Email label */
+.email-label {
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+    text-align: center;
+}
+
+/* Email input field */
+.email-input {
+    width: 350px; /* Smaller */
+    height: 55px; /* Shorter input box */
+    background-color: #F3EFF5;
+    border: none;
+    border-radius: 12px;
+    padding: 0 20px;
+    font-size: 16px;
+}
+
+/* Send code button */
+.send-code-button {
+    width: 280px; /* Smaller button */
+    height: 55px; /* Shorter button */
+    background-color: #F3EFF5;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Footer links section */
+.footer-links {
+    margin-top: 20px; /* Tighter below modal */
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    color: #D4AF37;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Footer links styles */
+.footer-links a {
+    text-decoration: none;
+    color: #D4AF37;
+}
+
+.footer-links span {
+    color: #D4AF37;
+}
