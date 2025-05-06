@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>More Details About You</title>
+  <link rel="stylesheet" href="/Assets/Styles/landlord_acct_setup.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <div class="top-bar">
+    <div class="logo">PropMate</div>
+    <a href="#" class="dashboard-link">Go to Dashboard</a>
+  </div>
+
+  <div class="progress-container">
+    <span>Step 1 of 5</span>
+    <div class="progress-bar">
+      <div class="progress-blue"></div>
+      <div class="progress-yellow"></div>
+    </div>
+  </div>
+
+  <h1 class="main-heading">More Details About You</h1>
+
+  <form class="details-form">
+    <label for="phone">Phone Number :</label>
+    <input type="text" id="phone" placeholder="12345678901" />
+
+    <div class="form-group">
+        <label for="profession">Profession:</label>
+        <select id="profession" name="profession" required>
+          <option value="" disabled selected>Select your profession</option>
+          <option value="accountant">Accountant</option>
+            <option value="architect">Architect</option>
+            <option value="artist">Artist</option>
+            <option value="chef">Chef</option>
+            <option value="content-writer">Content Writer</option>
+            <option value="customer-service">Customer Service</option>
+            <option value="data-analyst">Data Analyst</option>
+            <option value="data-scientist">Data Scientist</option>
+            <option value="digital-marketer">Digital Marketer</option>
+            <option value="doctor">Doctor</option>
+            <option value="electrician">Electrician</option>
+            <option value="engineer">Engineer</option>
+            <option value="farmer">Farmer</option>
+            <option value="financial-advisor">Financial Advisor</option>
+            <option value="graphic-designer">Graphic Designer</option>
+            <option value="human-resources">Human Resources</option>
+            <option value="lawyer">Lawyer</option>
+            <option value="marketing-specialist">Marketing Specialist</option>
+            <option value="mechanic">Mechanic</option>
+            <option value="nurse">Nurse</option>
+            <option value="pharmacist">Pharmacist</option>
+            <option value="photographer">Photographer</option>
+            <option value="plumber">Plumber</option>
+            <option value="product-manager">Product Manager</option>
+            <option value="project-manager">Project Manager</option>
+            <option value="real-estate-agent">Real Estate Agent</option>
+            <option value="sales-representative">Sales Representative</option>
+            <option value="software-developer">Software Developer</option>
+            <option value="teacher">Teacher</option>
+            <option value="translator">Translator</option>
+            <option value="ux-designer">UX Designer</option>
+            <option value="videographer">Videographer</option>
+            <option value="web-developer">Web Developer</option>
+            <option value="writer">Writer</option>
+            <option value="other">Other</option>
+        </select>
+      </div>
+      
+
+    <label for="upload">Upload Photo :</label>
+    <div class="upload-field">
+      <input type="file" id="upload" />
+     <i class="fa-solid fa-camera"></i>
+    </div>
+
+    <button type="submit">NEXT</button>
+  </form>
+
+  <div class="footer-actions">
+    <a href="#" class="skip">Skip for now</a>
+  </div>
+
+  <footer class="footer-links">
+    <a href="#">Terms of use</a>
+    <span>|</span>
+    <a href="#">Privacy</a>
+  </footer>
+</body>
+</html>
