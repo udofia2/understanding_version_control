@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>More Details About You</title>
-  <link rel="stylesheet" href="/Assets/Styles/landlord_acct_setup.css"/>
+  <link rel="stylesheet" href="../Assets/Styles/landlord_acct_setup.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -90,5 +90,66 @@
     <span>|</span>
     <a href="#">Privacy</a>
   </footer>
+
+  <script>
+    const form = document.querySelector(".details-form");
+    const photoInput = document.getElementById("upload");
+  
+    // Show uploaded photo preview
+    photoInput.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+        const preview = document.createElement("img");
+        preview.src = URL.createObjectURL(file);
+        preview.alt = "Preview";
+        preview.style.width = "150px";
+        preview.style.marginTop = "1rem";
+  
+        // Remove any previous preview
+        const oldPreview = document.querySelector(".photo-preview");
+        if (oldPreview) oldPreview.remove();
+  
+        preview.classList.add("photo-preview");
+        this.parentElement.appendChild(preview);
+      }
+    });
+  
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+  
+      const phone = document.getElementById("phone").value;
+      const profession = document.getElementById("profession").value;
+      const photo = photoInput.files[0];
+  
+      if (!phone || !profession || !photo) {
+        alert("Please fill in all fields and upload a photo.");
+        return;
+      }
+  
+      const formData = new FormData();
+      formData.append("phone", phone);
+      formData.append("profession", profession);
+      formData.append("photo", photo);
+  
+      fetch("http://localhost:5000/api/landlord/setup", {
+        method: "POST",
+        headers: {
+          "Authorization": "Bearer " + localStorage.getItem("token")
+        },
+        body: formData
+      })
+      .then(res => res.json())
+      .then(data => {
+        alert("Details submitted successfully!");
+        // Redirect to the next screen when ready
+        // window.location.href = "/path-to-next-step.html";
+      })
+      .catch(err => {
+        console.error(err);
+        alert("Something went wrong.");
+      });
+    });
+  </script>
+  
 </body>
 </html>

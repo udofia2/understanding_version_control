@@ -44,6 +44,35 @@
         <span>|</span>
         <a href="#">Privacy</a>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          document.querySelector(".send-code-button").addEventListener("click", function () {
+            const email = document.querySelector(".email-input").value;
+      
+            if (!email) {
+              alert("Please enter your email.");
+              return;
+            }
+      
+            fetch("http://localhost:5000/api/send-verification-code", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({ email })
+            })
+            .then(response => response.json())
+            .then(data => {
+              alert("Verification code sent!");
+            })
+            .catch(error => {
+              console.error("Error:", error);
+              alert("Something went wrong.");
+            });
+          });
+        });
+      </script>
+      
 
 </body>
 </html>
