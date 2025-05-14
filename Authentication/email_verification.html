@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Required - Propmate</title>
+    <link rel="stylesheet" href="../Assets/Styles/email_verification.css">
+</head>
+<body>
+
+    <!-- Header section with logo and back to home link -->
+    <header class="header">
+        <div class="logo">PropMate</div>
+        <a href="#" class="back-home">Back to home</a>
+    </header>
+
+    <!-- Main title -->
+    <h1 class="verification-title">VERIFICATION REQUIRED</h1>
+
+    <!-- Modal container -->
+    <div class="modal">
+
+        <!-- Image -->
+        <img src="../Assets/Images/securityicon.jpg" alt="Security Illustration" class="modal-image">
+
+        <!-- Description text -->
+        <p class="modal-description">
+            Lorem ipsum dolor sit amet consectetur. Orci nulla eget in id feugiat varius turpis viverra
+        </p>
+
+        <!-- Enter email label -->
+        <h2 class="email-label">Enter Your email</h2>
+
+        <!-- Email input field -->
+        <input type="email" class="email-input" placeholder="Enter your email">
+
+        <!-- Send code button -->
+        <button class="send-code-button">Send Code</button>
+    </div>
+
+    <!-- Footer links -->
+    <footer class="footer-links">
+        <a href="#">Terms of use</a>
+        <span>|</span>
+        <a href="#">Privacy</a>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          document.querySelector(".send-code-button").addEventListener("click", function () {
+            const email = document.querySelector(".email-input").value;
+      
+            if (!email) {
+              alert("Please enter your email.");
+              return;
+            }
+      
+            fetch("http://localhost:5000/api/send-verification-code", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({ email })
+            })
+            .then(response => response.json())
+            .then(data => {
+              alert("Verification code sent!");
+            })
+            .catch(error => {
+              console.error("Error:", error);
+              alert("Something went wrong.");
+            });
+          });
+        });
+      </script>
+      
+
+</body>
+</html>

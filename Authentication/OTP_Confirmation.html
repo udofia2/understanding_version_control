@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Confirm Your Email</title>
+  <link rel="stylesheet" href="../Assets/Styles/otp_confirmation.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Prop<span>Mate</span></div>
+    <a href="#" class="back-home">Back to home</a>
+  </header>
+
+  <main class="main-container">
+    <h2 class="confirm-title">CONFIRM YOUR EMAIL</h2>
+    
+    <div class="modal-box">
+      <img src="../Assets/Images/securityicon.jpg" alt="Security" class="security-img" />
+      
+      <p class="email-info">
+        We’ve sent a code to <span class="user-email">Johndoe@gmail.com</span>
+      </p>
+      
+      <p class="enter-label"><strong>Enter the verification code here</strong></p>
+
+      <p class="countdown">This code will expire in <span id="timer">02:00</span></p>
+
+      <div class="otp-inputs">
+        <input type="text" maxlength="1" />
+        <input type="text" maxlength="1" />
+        <input type="text" maxlength="1" />
+        <input type="text" maxlength="1" />
+        <input type="text" maxlength="1" />
+        <input type="text" maxlength="1" />
+      </div>
+
+      <p class="change-email">Not my Email Address? <a href="#">Change</a></p>
+
+      <p class="resend-text">Didn’t receive the email ? <a href="#">Resend</a></p>
+    </div>
+
+    <!-- Terms section moved below modal -->
+    <div class="terms-links">
+      <a href="#">Terms of use</a>
+      <span>|</span>
+      <a href="#">Privacy</a>
+    </div>
+  </main>
+
+  <script src="../Assets/Scripts/otp_confirmation.js"></script>
+</body>
+</html>
